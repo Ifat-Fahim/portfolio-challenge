@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap");
+
+:root {
+    --clr-primary-dark: #1f2833;
+    --clr-secondary-dark: #0b0c10;
+    --clr-dark-blue: #071c31;
+    --clr-accent: #2fd3c8;
+    --clr-white: #fffafa;
+    scroll-padding-top: 57px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 16px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    background: var(--clr-dark-blue);
+    color: var(--clr-white);
+}
+
+/* basic styles start*/
+
+h1,
+h2 {
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn {
+    border: 0;
+    outline: 0;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+}
+/* basic style end */
+
+/* navbar style */
+
+.nav {
+    background: var(--clr-primary-dark);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav > .flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    color: var(--clr-white);
+    margin-right: 2rem;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+.nav__logo a {
+    text-decoration: none;
+    color: var(--clr-white);
+}
+
+.nav__logo span {
+    color: var(--clr-accent);
+    font-size: 2rem;
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.nav__item {
+    position: relative;
+}
+
+.nav__item + .nav__item {
+    margin-left: 5px;
+}
+
+nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--clr-white);
+    padding: 1rem;
+}
+
+.nav__link--last {
+    padding-right: 0;
+}
+
+.nav__link + .nav__link {
+    margin-right: 1rem;
+}
+
+.nav__link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    background: var(--clr-accent);
+}
+
+.nav__link:hover::before {
+    bottom: 10px;
+    opacity: 1;
+}
+
+/* nav style end */
+
+/* hero style */
+.hero {
+    padding-top: 4.5rem;
+}
+
+.hero__text span {
+    color: var(--clr-accent);
+}
+
+.hero .flex {
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero__btn {
+    color: var(--clr-white);
+    font-weight: 700;
+    letter-spacing: 1px;
+    outline: 1px solid var(--clr-accent);
+    background: transparent;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.hero__btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: var(--clr-accent);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s ease;
+}
+
+.hero__btn:hover::before,
+.hero__btn:hover {
+    transform: scale(1);
+    color: #000;
+}
+
+/* about styles */
+
+.about {
+    margin-top: 2rem;
+}
+
+.about__title,
+.skill__title {
+    text-align: center;
+}
+
+.underline {
+    border-bottom: 3px solid var(--clr-white);
+}
+
+.about .flex {
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* skill style start */
+
+.skill__group {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+.skill__group span {
+    display: inline-block;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.skill__bar {
+    width: 100%;
+    border-radius: 3.5rem;
+    text-align: center;
+    cursor: pointer;
+    background: #eee;
+    overflow: hidden;
+}
+
+.skill__level {
+    background: var(--clr-dark-blue);
+}
+
+/* skill style end */
+
+/* media queries */
+@media (max-width: 768px) {
+    /* for hero section */
+    .hero > .flex,
+    .about > .flex {
+        flex-direction: column;
+    }
+
+    .hero__img,
+    .about__img {
+        max-width: 400px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* for about section */
+    .about__img {
+        margin-top: 1.5rem;
+        order: -1;
+    }
+}
