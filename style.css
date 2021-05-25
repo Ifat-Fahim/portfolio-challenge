@@ -2,11 +2,11 @@
 
 :root {
     --clr-primary-dark: #1f2833;
-    --clr-secondary-dark: #0b0c10;
+    --clr-secondary-dark: #263238;
     --clr-dark-blue: #071c31;
-    --clr-accent: #2fd3c8;
+    --clr-accent: #1de9be;
     --clr-white: #fffafa;
-    scroll-padding-top: 57px;
+    scroll-padding-top: 65px;
 }
 
 *,
@@ -27,7 +27,7 @@ body {
     font-family: "Oswald", sans-serif;
     font-weight: 300;
     letter-spacing: 0.8px;
-    background: var(--clr-dark-blue);
+    background: var(--clr-primary-dark);
     color: var(--clr-white);
 }
 
@@ -60,12 +60,16 @@ img {
     cursor: pointer;
     padding: 0.5rem 1.5rem;
 }
+
+.highlight {
+    color: var(--clr-accent);
+}
 /* basic style end */
 
 /* navbar style */
 
 .nav {
-    background: var(--clr-primary-dark);
+    background: var(--clr-secondary-dark);
     position: fixed;
     top: 0;
     width: 100%;
@@ -156,6 +160,28 @@ nav ul li a {
     color: var(--clr-accent);
 }
 
+.hero__text div {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.hero__text a {
+    display: inline-block;
+    font-size: 2.5rem;
+    color: var(--clr-white);
+    text-decoration: none;
+    animation: float 800ms linear infinite alternate;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(-1rem);
+    }
+    to {
+        transform: translateY(1rem);
+    }
+}
+
 .hero .flex {
     align-items: center;
     gap: 1.5rem;
@@ -199,12 +225,14 @@ nav ul li a {
 }
 
 .about__title,
-.skill__title {
+.skill__title,
+.services__title,
+.contact__title {
     text-align: center;
 }
 
 .underline {
-    border-bottom: 3px solid var(--clr-white);
+    border-bottom: 3px solid var(--clr-accent);
 }
 
 .about .flex {
@@ -241,10 +269,148 @@ nav ul li a {
 .skill__level {
     background: var(--clr-dark-blue);
 }
-
 /* skill style end */
 
+/* services section start */
+
+.services {
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.services h3,
+.services p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+.services > .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.services__card {
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: box-shadow, transform 500ms ease;
+}
+
+.services__card i {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    color: var(--clr-white);
+}
+
+.services__card--active i {
+    animation: rotate 5s linear infinite;
+    color: var(--clr-dark-blue);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.services__card:hover {
+    box-shadow: 0 0 1px 1px rgb(255, 255, 255, 0.1),
+        0 0 2px 2px rgba(255, 255, 255, 0.1),
+        0 0 3px 3px rgba(255, 255, 255, 0.1),
+        0 0 4px 4px rgba(255, 255, 255, 0.1),
+        0 0 5px 5px rgba(255, 255, 255, 0.1),
+        0 0 6px 6px rgba(255, 255, 255, 0.1),
+        0 0 6px 6px rgba(255, 255, 255, 0.1);
+    transform: translateY(-0.5rem);
+}
+
+.services__card {
+    background: var(--clr-dark-blue);
+}
+
+.services__card--active {
+    background: var(--clr-accent);
+    color: var(--clr-primary-dark);
+}
+/* services section end */
+
+/* contact section start */
+.contact {
+    margin-top: 2rem;
+    padding: 3rem 0;
+}
+
+.query {
+    text-align: center;
+    font-size: clamp(2rem, 3rem, 4rem);
+    margin: 1rem 0;
+}
+
+.contact .flex {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.contact ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact ul li {
+    cursor: pointer;
+    transition: transform 500ms ease;
+    font-size: 3rem;
+}
+
+.contact li:hover {
+    transform: translateY(-0.8rem);
+}
+
+.separator {
+    height: 3px;
+    background: var(--clr-accent);
+}
+/* contact section end */
+
+/* footer section styles */
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.gray {
+    color: gray;
+}
+
+footer a {
+    display: inline-block;
+    color: var(--clr-white);
+    font-size: 2.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    animation: float 1s linear infinite alternate;
+}
+
 /* media queries */
+
+@media (max-width: 850px) {
+    .services > .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     /* for hero section */
     .hero > .flex,
@@ -263,5 +429,11 @@ nav ul li a {
     .about__img {
         margin-top: 1.5rem;
         order: -1;
+    }
+}
+
+@media (max-width: 650px) {
+    .services > .grid {
+        grid-template-columns: 1fr;
     }
 }

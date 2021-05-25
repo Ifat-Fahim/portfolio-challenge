@@ -1,120 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfolio Challenge</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
 
-    <body>
-        <!-- navbar start -->
-        <nav class="nav">
-            <div class="container flex">
-                <h1 class="nav__logo">
-                    <a href="#home">Fahim<span>.</span></a>
-                </h1>
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">about me</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skill" class="nav__link">skills</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">projects</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link nav__link--last"
-                            >contact</a
-                        >
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- navbar end -->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio Challenge</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
 
-        <!-- hero section start -->
-        <header class="hero" id="home">
-            <div class="container flex">
-                <div class="hero__img">
-                    <img src="images/peter.png" alt="peter" />
-                </div>
-                <div class="hero__text">
-                    <h1>Hello, I'm <span>Peter Pan.</span></h1>
-                    <h2>I'm a developer.</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Error ullam placeat voluptas ducimus. Quo deserunt
-                        modi rerum eius doloremque eaque non officia quae
-                        voluptate dignissimos similique provident facilis,
-                        temporibus fugit debitis iusto quia rem repellat,
-                        mollitia quod architecto tempore! Excepturi dolor cum
-                        amet iure totam vel, ipsa perspiciatis obcaecati
-                        aliquid!
-                    </p>
-                    <button class="btn hero__btn">Hire Me</button>
-                </div>
-            </div>
-        </header>
-        <!-- hero section end -->
-
-        <!-- about me section start -->
-        <section id="about" class="about">
-            <h1 class="about__title">
-                <span class="underline">About Me</span>
+<body>
+    <!-- navbar start -->
+    <nav class="nav">
+        <div class="container flex">
+            <h1 class="nav__logo">
+                <a href="#home">Fahim<span>.</span></a>
             </h1>
-            <div class="container flex">
-                <div class="about__text">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Velit consequuntur quod ratione aperiam, amet voluptatem
-                        asperiores dignissimos accusantium aspernatur dolore.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Laborum, voluptate?
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link">home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">about me</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#skill" class="nav__link">skills</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#services" class="nav__link">services</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link nav__link--last">contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- hero section start -->
+    <header class="hero" id="home">
+        <div class="container flex">
+            <div class="hero__img">
+                <img src="images/peter.png" alt="peter" />
+            </div>
+            <div class="hero__text">
+                <h1>Hello, I'm <span>Peter Pan.</span></h1>
+                <h2>I'm a developer.</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Error ullam placeat voluptas ducimus. Quo deserunt
+                    modi rerum eius doloremque eaque non officia quae
+                    voluptate dignissimos similique provident facilis,
+                    temporibus fugit debitis iusto quia rem repellat,
+                    mollitia quod architecto tempore! Excepturi dolor cum
+                    amet iure totam vel, ipsa perspiciatis obcaecati
+                    aliquid!
+                </p>
+                <button class="btn hero__btn">Hire Me</button>
+                <div>
+                    <a href="#footer"><i class="fas fa-arrow-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- hero section end -->
+
+    <!-- about me section start -->
+    <section id="about" class="about">
+        <h1 class="about__title">
+            <span class="underline">About Me</span>
+        </h1>
+        <div class="container flex">
+            <div class="about__text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Velit consequuntur quod ratione aperiam, amet voluptatem
+                    asperiores dignissimos accusantium aspernatur dolore.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laborum, voluptate?
+                </p>
+            </div>
+            <div class="about__img">
+                <img src="images/peter_dream.png" alt="" />
+            </div>
+        </div>
+    </section>
+    <!-- about me section end -->
+
+    <!-- skill section start  -->
+    <section class="skill" id="skill">
+        <div class="container">
+            <h1 class="skill__title">
+                <span class="underline">My Skills</span>
+            </h1>
+            <div class="skill__group">
+                <span>HTML</span>
+                <div class="skill__bar">
+                    <div class="skill__level" style="width: 95%">95%</div>
+                </div>
+                <span>CSS</span>
+                <div class="skill__bar">
+                    <div class="skill__level" style="width: 90%">90%</div>
+                </div>
+                <span>JavaScript</span>
+                <div class="skill__bar">
+                    <div class="skill__level" style="width: 80%">80%</div>
+                </div>
+                <span>React Js</span>
+                <div class="skill__bar">
+                    <div class="skill__level" style="width: 88%">88%</div>
+                </div>
+                <span>Node JS</span>
+                <div class="skill__bar">
+                    <div class="skill__level" style="width: 70%">70%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- skill section end -->
+
+    <!-- projects section start -->
+    <section class="services" id="services">
+        <h1 class="services__title">
+            <span class="underline">My Awesome <span class="highlight">Services</span></span>
+        </h1>
+        <div class="container grid">
+            <div class="services__card">
+                <i class="fab fa-uikit"></i>
+                <h3>Ui/UX design</h3>
+                <p class="services__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Doloribus odit perspiciatis suscipit fugit facilis
+                    dolorum iusto ratione molestias molestiae commodi!
+                </p>
+            </div>
+            <div class="card">
+                <div class="services__card services__card--active">
+                    <i class="fab fa-react"></i>
+                    <h3>Frontend Development</h3>
+                    <p class="services__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Doloribus odit perspiciatis suscipit fugit
+                        facilis dolorum iusto ratione molestias molestiae
+                        commodi!
                     </p>
                 </div>
-                <div class="about__img">
-                    <img src="images/peter_dream.png" alt="" />
+            </div>
+            <div class="card">
+                <div class="services__card">
+                    <i class="fab fa-node"></i>
+                    <h3>Backend Development</h3>
+                    <p class="services__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Doloribus odit perspiciatis suscipit fugit
+                        facilis dolorum iusto ratione molestias molestiae
+                        commodi!
+                    </p>
                 </div>
             </div>
-        </section>
-        <!-- about me section end -->
+            <div class="card">
+                <div class="services__card">
+                    <i class="fas fa-chalkboard"></i>
+                    <h3>Online Traning</h3>
+                    <p class="services__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Doloribus odit perspiciatis suscipit fugit
+                        facilis dolorum iusto ratione molestias molestiae
+                        commodi!
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- projects section end -->
 
-        <!-- skill section start  -->
-        <section class="skill" id="skill">
+    <!-- contact section start -->
+    <section class="contact" id="contact">
+        <h1 class="contact__title"><span class="underline">Contact</span></h1>
+        <h1 class="query">If you have any Queries, please feel free to contact me.</h1>
+        <div class="container">
+            <ul class="flex">
+                <li>
+                    <i class="fab fa-facebook-square"></i>
+                </li>
+                <li>
+                    <i class="fab fa-twitter"></i>
+                </li>
+                <li>
+                    <i class="fab fa-instagram"></i>
+                </li>
+                <li>
+                    <i class="fab fa-github"></i>
+                </li>
+                <li>
+                    <i class="fab fa-whatsapp-square"></i>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- contact section end -->
+    <div class="separator"></div>
+
+    <!-- footer section start -->
+        <footer id="footer">
             <div class="container">
-                <h1 class="skill__title">
-                    <span class="underline">My Skills</span>
-                </h1>
-                <div class="skill__group">
-                    <span>HTML</span>
-                    <div class="skill__bar">
-                        <div class="skill__level" style="width: 95%">95%</div>
-                    </div>
-                    <span>CSS</span>
-                    <div class="skill__bar">
-                        <div class="skill__level" style="width: 90%">90%</div>
-                    </div>
-                    <span>JavaScript</span>
-                    <div class="skill__bar">
-                        <div class="skill__level" style="width: 80%">80%</div>
-                    </div>
-                    <span>React Js</span>
-                    <div class="skill__bar">
-                        <div class="skill__level" style="width: 88%">88%</div>
-                    </div>
-                    <span>Node JS</span>
-                    <div class="skill__bar">
-                        <div class="skill__level" style="width: 70%">70%</div>
-                    </div>
-                </div>
+                <p>Fahim's portfolio. &copy;2021</p>
+                <p class="gray">Note: This is a dummy portfolio website.</p>
             </div>
-        </section>
-        <!-- skill section end -->
-    </body>
+            <a href="#home"><i class="fas fa-arrow-up"></i></a>
+        </footer>
+    <!-- footer section end -->
+</body>
+
 </html>
